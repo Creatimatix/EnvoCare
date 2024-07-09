@@ -27219,6 +27219,11 @@ a.logo_footer {
 	padding: 0;
 }
 
+.make-in-india{
+	margin-left: 20px;
+	justify-content: flex-end;
+}
+
 @media (max-width: 575px) {
 	.top-includes {
 		justify-content: center;
@@ -27248,9 +27253,10 @@ a.logo_footer {
 }
 
 .top-includes > li.metaphone {
-	font-size: 30px;
+	font-size: 22px;
 	font-weight: 500;
 	letter-spacing: 1px;
+	/* justify-content: end; */
 }
 
 @media (max-width: 1400px) {
