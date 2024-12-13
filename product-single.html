@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<title>SS Scientific</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome5.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+	<script>
+		var product;
+
+		const urlParams = new URLSearchParams(window.location.search);
+		const product_id = urlParams.get('product_id');
+		// console.log(product_id);
+		// fetch('https://creatimatix.com/ssbackend/api/category-product')
+		fetch('https://ssscientific.net/ssbackend/api/product/'+product_id)
+		.then(response => {
+		if (!response.ok) {
+		throw new Error('Network response was not ok');
+		}
+		  product = response.json();
+		  return product; // Parse the JSON response
+		})
+		.then(response => {
+					product=JSON.stringify(response)
+	// console.log(product);
+	
+		 })
+		.catch(error => {
+		console.error('There was a problem with the fetch operation:', error);
+	});
+	
+
+		
+		</script>
+
+<style>
+
+.product_img
+{
+	max-width: 300px;
+	max-height: 300px;
+}
+
+/* Loader styles (simple spinner) */
+.loader {
+	border: 8px solid #f3f3f3;  /* Light background */
+  border-top: 8px solid #db9e34; /* Blue spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+
+  /* Absolute positioning to center the loader */
+  position: absolute;
+  top: 50%;        /* Position loader vertically at 50% */
+  left: 50%;       /* Position loader horizontally at 50% */
+  transform: translate(-50%, -50%); /* Move the loader back by 50% of its width and height */
+}
+
+/* Animation for spinning */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+</style>
+
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+  <!-- Loader element -->
+  <div id="loader" class="loader"></div>
+
+
+
+	
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+			<!--topline section visible only on small screens|-->
+
+
+			
+			<header class="page_header header-1 ls s-py-20 ">
+
+				<div class="container">
+
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="col-xl-3 col-md-4 col-12 text-center">
+							<a href="./" class="logo">
+								<img src="images/logo.png" alt="">
+								<span class="d-flex flex-column">
+									<!-- <span class="logo-text color-darkgrey">nafta</span>
+									<span class="logo-subtext">oil & gas industry</span> -->
+								</span>
+							</a>
+						</div>
+						<div class="col-xl-6 col-1 text-left">
+							<!-- main nav start -->
+							<nav class="top-nav">
+								<ul class="nav sf-menu">
+
+
+									<li class="active">
+										<a href="index.html">Home</a>
+									</li>
+
+									<li>
+										<a href="about.html">About Us</a>
+									</li>
+									<!-- eof pages -->
+
+	<!-- contacts -->
+	<li>
+		<a href="Products.html">Products</a>
+	</li>
+	<!-- eof contacts -->
+									
+									<!-- eof features -->
+
+									<!-- contacts -->
+									<li>
+										<a href="contact.html">Contact</a>
+									</li>
+									<!-- eof contacts -->
+								</ul>
+
+
+							</nav>
+							<!-- eof main nav -->
+						</div>
+						<div class="col-xl-3 col-md-7 col-12  d-flex justify-content-md-end">
+							<ul class="top-includes">
+								<li class="metaphone">
+									<a href="https://api.whatsapp.com/send/?phone=919833241875&text&type=phone_number&app_absent=0">    +91 9833 21875</a>
+								</li>
+							</ul>
+
+							<div class="make-in-india">
+								<img src="images/Make_In_India.png" alt="">
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!-- header toggler -->
+				<span class="toggle_menu"><span>menu</span></span>
+			</header>
+
+
+
+			<section class="page_title ds s-parallax s-pb-xl-80  s-pb-lg-100  s-pb-md-90 s-pt-md-190 s-pt-180 s-pb-60">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1>Products</h1>
+							<div class="breadcrumb-wrap">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item">
+										<a href="./index.html">Home</a>
+									</li>
+									<li class="breadcrumb-item active">
+										<a href="./products.html">Products</a>
+									</li>
+								</ol>
+							</div>
+
+						</div>
+
+
+					</div>
+				</div>
+			</section>
+
+			<section class="ls fw-team-template-default single s-pt-xl-160 s-pt-lg-130 s-pt-md-90 s-pt-60 s-pb-xl-160 s-pb-lg-130 s-pb-md-90 s-pb-60">
+				<div class="container" style="padding-top:100px">
+					<div class="row">
+						<div class="col-12">
+							<div class="row">
+								<div class="col-12">
+									<div class="side-item">
+										<div class="item-media rounded" id="product-image" >
+											<!-- <img src="images/team/team-single.jpg" alt="team"> -->
+										</div>
+										
+										<!-- <div class="item-media" id="download-button">
+											<div class="divider-30 hidden-below-md"></div>
+
+										</div> -->
+										<div class="item-content" style="padding-top: 0px;">
+											<h2 id="product-title">
+												
+											</h2>
+											
+											<p class="small-text color-main">
+												
+											</p>
+											<div class="divider-30 hidden-below-md"></div>
+											<div class="divider-30 hidden-above-md"></div>
+											<p id="product-description">
+												
+											</p>
+											
+											<div class="divider-30 hidden-below-md"></div>
+											<div class="divider-30 hidden-above-md"></div>
+											<span class="social-icons">
+												<a href="#" class="fab fa-facebook-f" title="facebook"></a>
+												<a href="#" class="fab fa-telegram-plane" title="telegram"></a>
+												<a href="#" class="fab fa-instagram" title="instagram"></a>
+												<a href="#" class="fab fa-linkedin-in" title="linkedin"></a>
+											</span>
+											<div class="divider-30 hidden-below-md"></div>
+											<div class="divider-30 hidden-above-md"></div>
+										
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<footer class="page_footer  text-center c-gutter-100 text-sm-left  ds">
+				<div class="container">
+					<div class="row justify-content-center">
+
+						<div class="col-lg-4 col-md-6 order-1 order-lg-1  animate" data-animation="fadeInUp">
+							<div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-90 divider-60"></div>
+							<a href="./" class="logo">
+								<img src="images/logo.png" alt="">
+								<span class="d-flex flex-column">
+									<span class="logo-text color-darkgrey">SS Scientific</span>
+									<!-- <span class="logo-subtext">oil &amp; gas industry</span> -->
+								</span>
+							</a>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elitsed eiusmod tempor incididunt ut labordolore magna aliqua eniminim
+							</p>
+							<a href="javascript:void(0)" class="fab fa-facebook-f rounded-icon bg-icon fs-16" title="facebook"></a>
+							<a href="javascript:void(0)" class="fab fa-twitter rounded-icon bg-icon fs-16" title="telegram"></a>
+							<a href="javascript:void(0)" class="fab fa-linkedin-in rounded-icon bg-icon fs-16" title="linkedin"></a>
+							<a href="javascript:void(0)" class="fab fa-instagram rounded-icon bg-icon fs-16" title="instagram"></a>
+							<div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-60 divider-30"></div>
+						</div>
+
+						<div class="col-lg-4 col-md-12 ls order-3 order-lg-2 footer-special-column text-center animate" data-animation="fadeInUp">
+							<div class="form-wrapper">
+								<form class="contact-form" method="post" action="/">
+									<div class="row c-mb-20">
+										<div class="col-12 form-title text-center form-builder-item">
+											<div class="header title">
+												<h2>Write Us</h2>
+											</div>
+										</div>
+									</div>
+									<div class="row c-mb-10 c-gutter-10">
+										<div class="col-lg-12 text-center">
+											<div class="form-group has-placeholder">
+												<label for="name22335x5553">Full Name <span class="required">*</span></label>
+												<input type="text" aria-required="true" size="30" value="" name="name" id="name22335x5553" class="form-control" placeholder="Full Name">
+											</div>
+										</div>
+									</div>
+									<div class="row c-mb-10 c-gutter-10">
+										<div class="col-lg-12 text-center">
+											<div class="form-group has-placeholder">
+												<label for="name223355553">Phone Number <span class="required">*</span></label>
+
+												<input type="text" aria-required="true" size="30" value="" name="name" id="name223355553" class="form-control" placeholder="Phone Number">
+											</div>
+										</div>
+									</div>
+									<div class="row c-mb-10 c-gutter-10">
+										<div class="col-sm-12 text-center">
+											<div class="form-group has-placeholder">
+												<label for="message22335553">Message</label>
+
+												<textarea aria-required="true" rows="6" cols="45" name="message" id="message22335553" class="form-control" placeholder="Your Message"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row c-mb-10 c-gutter-10">
+										<div class="col-sm-12 mb-0 mt-50">
+											<div class="form-group">
+												<input class="btn btn-gradient big-btn" type="submit" value="Send message">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<h6 class="fs-12 text-uppercase">&copy; Copyright <span class="copyright_year">2019</span> All Rights Reserved</h6>
+						</div>
+
+						<div class="col-lg-4 col-md-6 order-2 order-lg-3 animate" data-animation="fadeInUp">
+							<div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-90"></div>
+							<div class="widget widget_icons_list">
+								<ul>
+									<li class="icon-inline ">
+										<div class="icon-styled icon-top  bordered round fs-16">
+											<i class="fas fa-phone"></i>
+										</div>
+										<p>800 123 4567</p>
+									</li>
+									<li class="icon-inline">
+										<div class="icon-styled icon-top bordered round  fs-16">
+											<i class="fas fa-envelope"></i>
+
+
+										</div>
+										<p><a href="javascript:void(0)">SS Scientific@example.com</a></p>
+									</li>
+									<li class="icon-inline">
+										<div class="icon-styled icon-top bordered round  fs-16">
+											<i class="fas fa-map-marker-alt"></i>
+										</div>
+										<p>
+											2469 Hoffman Avenue<br>
+											New York, NY 10016
+										</p>
+									</li>
+									<li class="icon-inline">
+										<div class="icon-styled icon-top bordered round  fs-16">
+											<i class="fas fa-clock"></i>
+										</div>
+										<p>
+											Mo-Fri: 8am - 6pm<br>
+											Sat: 10am - 4pm<br>
+											Sun: of
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div class="fw-divider-space divider-xl-160 divider-lg-130 divider-md-60 divider-30"></div>
+						</div>
+					</div>
+				</div>
+
+			</footer>
+
+
+
+		</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+	<script src="product-single.js"></script>
+
+
+</body>
+
+</html>
